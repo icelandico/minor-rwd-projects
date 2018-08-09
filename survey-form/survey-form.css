@@ -1,31 +1,37 @@
 @import '../styles/style-variables.css';
+@import '../styles/reset.css';
 
-body {
-    min-height: 100vh ;
-    padding: 0;
-    margin: 0;
+html, body {
+    box-sizing: border-box;
     background: var(--light-brown);
     color: var(--dark-blue);
-    position: relative;
     font-family: "Courier New", monospace;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 8px;
 }
 
 .main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid;
-    border-radius: 25px;
-    max-width: 50%;
-    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
     background: var(--darker-brown);
+    font-size: 2rem;
+}
+
+.main > div {
+    flex: 1;
 }
 
 .header {
+    margin: 3%;
     text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 3%;
 }
 
 .form-input {
@@ -36,11 +42,12 @@ body {
 
 label {
     display: block;
+    font-size: 2rem;
 }
 
 .choose-label {
     margin-bottom: 3%;
-    font-size: 18px;
+    font-size: 2rem;
 }
 
 input, textarea {
@@ -69,8 +76,8 @@ input:focus, textarea:focus {
 
 input:focus + .fill-label,
 textarea:focus + .fill-label {
-    margin-left: 40%;
-    font-size: 60%;
+    margin-left: 30%;
+    font-size: 1.5rem;
     padding: 2px 15px;
     text-transform: uppercase;
     color: var(--black);
@@ -80,6 +87,11 @@ textarea:focus + .fill-label {
 input:valid + .fill-label,
 textarea:valid + .fill-label {
     opacity: 0;
+}
+
+input:hover,
+textarea:hover  {
+    border-color: var(--reddish);
 }
 
 #dropdown {
@@ -104,7 +116,14 @@ textarea:valid + .fill-label {
     border-radius: 10px;
 }
 
-
-
+@media screen and (min-width: 968px) {
+    .main {
+        margin: 1% auto;
+        border-radius: 25px;
+        border: 2px solid;
+        max-width: 30%;
+        padding: 0;
+    }
+}
 
 
