@@ -17,22 +17,22 @@
   <form id="survey-form">
 
     <div class="form-input name">
-      <input id="name-label" name="name" type="text" required>
-      <label class="fill-label" for="name-label">Your Name</label>
+      <input id="name" name="name" type="text" required>
+      <label class="fill-label" for="name">Your Name</label>
     </div>
 
     <div class="form-input email">
-      <input id="email-label" name="email"required>
-      <label class="fill-label" for="email-label">Your eMail</label>
+      <input id="email" name="email"required>
+      <label class="fill-label" for="email">Your eMail</label>
     </div>
 
     <div class="form-input name">
-      <input id="number-label" name="number" required>
-      <label class="fill-label" for="number-label">Your Age</label>
+      <input id="number" name="number" required type="text" min="10" max="99">
+      <label class="fill-label" for="number">Your Age</label>
     </div>
 
     <div class="form-input location">
-      <label for="dropdown">What's Your region</label>
+      <label class="choose-label" for="dropdown">What's Your region</label>
       <select id="dropdown">
         <option value="East Europe">East Europe</option>
         <option value="West Europe">West Europe</option>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="form-input gis-software">
-      <label>Which GIS software do You use at most?</label>
+      <label class="choose-label">Which GIS software do You use at most?</label>
       <input class="choose-option" name="gis" type="radio" value="ArcGIS">ArcGIS<br>
       <input class="choose-option" name="gis" type="radio" value="Qgis">Qgis<br>
       <input class="choose-option" name="gis" type="radio" value="MapInfo">MapInfo<br>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="form-input">
-      <label>What's Your key uses of GIS software</label>
+      <label class="choose-label">What's Your key uses of GIS software</label>
       <input type="checkbox" value="vector">Vector analysis<br>
       <input type="checkbox" value="raster">Raster analysis<br>
       <input type="checkbox" value="composition">Map composition<br>
@@ -60,8 +60,12 @@
     </div>
 
     <div class="form-input opinion">
-      <textarea id="textarea-label" rows="4"required></textarea>
+      <textarea id="textarea-label" rows="4" required></textarea>
       <label class="fill-label" for="textarea-label">Your opinion</label>
+    </div>
+
+    <div class="form-input">
+      <button class="button-submit" type="submit">Submit form</button>
     </div>
 
   </form>

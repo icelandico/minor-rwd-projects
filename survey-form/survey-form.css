@@ -1,14 +1,15 @@
 @import '../styles/style-variables.css';
 
 body {
-    margin: 0 ;
     min-height: 100vh ;
-    padding: 0 ;
+    padding: 0;
+    margin: 0;
     background: var(--light-brown);
     color: var(--dark-blue);
     position: relative;
     font-family: "Courier New", monospace;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .main {
@@ -18,9 +19,9 @@ body {
     transform: translate(-50%, -50%);
     border: 2px solid;
     border-radius: 25px;
-    padding: 2%;
     max-width: 50%;
-    background: var(--form-background);
+    padding: 0 20px;
+    background: var(--darker-brown);
 }
 
 .header {
@@ -30,11 +31,16 @@ body {
 .form-input {
     margin: 4% auto;
     position: relative;
-    width: 250px;
+    width: 200px;
 }
 
 label {
     display: block;
+}
+
+.choose-label {
+    margin-bottom: 3%;
+    font-size: 18px;
 }
 
 input, textarea {
@@ -66,7 +72,6 @@ textarea:focus + .fill-label {
     margin-left: 40%;
     font-size: 60%;
     padding: 2px 15px;
-    z-index: 2;
     text-transform: uppercase;
     color: var(--black);
     width: 100%;
@@ -77,8 +82,26 @@ textarea:valid + .fill-label {
     opacity: 0;
 }
 
+#dropdown {
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
 .opinion {
     margin: 0 auto;
+}
+
+.button-submit {
+    margin: 0 auto;
+    display: block;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    background: var(--darker-brown);
+    border: 2px solid var(--dark-blue);
+    box-shadow: 1px 1px;
+    border-radius: 10px;
 }
 
 
