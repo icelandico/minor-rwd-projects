@@ -1,0 +1,57 @@
+@import '../styles/style-variables.css';
+
+#survey-form {
+    width: 50%;
+}
+
+.form-input {
+    position: relative;
+    margin: 5%;
+    width: 200px;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    border: 3px solid var(--light-gray);
+    background: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 8px 12px;
+}
+
+.fill-label {
+    position: absolute;
+    transition: 0.2s;
+    color: var(--light-gray);
+    top: 0;
+    left: 0;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--border-focus);
+}
+
+input:focus + .fill-label,
+textarea:focus + .fill-label {
+    margin-left: 50%;
+    font-size: 60%;
+    padding: 2px 15px;
+    z-index: 2;
+    text-transform: uppercase;
+    color: var(--black);
+    width: 100%;
+}
+
+input:valid + .fill-label,
+textarea:valid + .fill-label {
+    opacity: 0;
+}
+
+
+
