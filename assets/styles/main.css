@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #324E78;
+  color: #ecf0f1;
+}
+
+header, 
+section {
+  margin: 0 auto;
+}
+
+.content-container {
+  background: #536D93;
+  height: 100%;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+.project-container {
+  margin: 0 auto;
+  background: #8094B2;
+  width: 30%;
+  padding: 5px;
+}
+
