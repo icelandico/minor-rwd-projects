@@ -1,0 +1,10 @@
+@import '../../assets/styles/style-variables.css';
+@import '../../assets/styles/reset.css';
+
+html, body {
+    box-sizing: border-box;
+    background: var(--light-brown);
+    color: var(--dark-blue);
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+}
