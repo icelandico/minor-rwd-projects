@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+body {
+    margin: 0;
+    background:no-repeat url("http://2.bp.blogspot.com/-p62W82y9NyU/UcxBG1_eVTI/AAAAAAAAAsk/Z-qd4BKU75A/s640/13.jpg");
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid rgba(206, 206, 206, 0.4);
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+}
+
+.button {
+    flex: 1;
+    border: .1rem solid #966743;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .05s;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+    word-wrap: break-word;
+}
+
+span {
+    display: block;
+}
+
+.button-click {
+    background: rgba(175, 30, 18,0.75);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #363636;
+}
