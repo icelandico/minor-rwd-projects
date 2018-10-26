@@ -5,6 +5,52 @@ html, body {
     box-sizing: border-box;
     background: var(--light-brown);
     color: var(--dark-blue);
-    font-family: "Courier New", monospace;
-    font-size: 8px;
+    font-family: "Calibri", monospace;
+    font-size: 12px;
 }
+
+.page {
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.navigation {
+  font-size: 1.5rem;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.nav-list {
+  text-align: center;
+}
+
+.nav-list li {
+  margin: 0.5rem 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  list-style: none;
+  color: var(--light-brownie);
+}
+
+.main-content {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+@media (min-width: 700px) {
+  .page {
+    grid-template-columns: 1fr 4fr;
+    align-items: start;
+    justify-items: start;
+  }
+
+  .nav-list {
+    text-align: left;
+  }
+}
+
+
