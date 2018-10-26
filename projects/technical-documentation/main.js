@@ -1,5 +1,5 @@
-const button = document.querySelector('.menu')
-const navigationList = document.querySelector('.nav-list')
+const button = document.querySelector('.menu-button');
+const navigationList = document.querySelector('.nav-list');
 
 button.addEventListener('click', showIt);
 
