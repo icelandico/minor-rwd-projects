@@ -2,9 +2,122 @@
 @import '../../assets/styles/reset.css';
 
 html, body {
-    box-sizing: border-box;
-    background: var(--light-brown);
-    color: var(--dark-blue);
-    font-family: "Courier New", monospace;
-    font-size: 8px;
+  box-sizing: border-box;
+  background: var(--light-brown);
+  color: var(--dark-blue);
+  font-family: "Calibri", monospace;
+  font-size: 12px;
+}
+
+.page {
+  display: grid;
+  padding: 1rem 2rem;
+  justify-items: stretch;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    "nav"
+    "content"
+    "footer"
+  ;
+}
+
+.navigation {
+  grid-area: nav;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  border-bottom: 3px double var(--black);
+  perspective: 800px;
+}
+
+.nav-list {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 1rem;
+  transform: rotateX(90deg);
+  transition: all 0.75s;
+  max-height: 0;
+}
+
+.nav-list.open {
+  display: block;
+  max-height: 500px;
+  transform: rotateX(0);
+}
+
+.nav-list li {
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  border-top: 1px solid var(--light-brownie);
+  border-bottom: 1px solid var(--light-brownie);
+}
+
+.nav-link {
+  text-decoration: none;
+  list-style: none;
+  color: var(--light-brownie);
+}
+
+.menu-button {
+  background: var(--light-brownie);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--light-brown);
+  margin-top: 0.5rem;
+}
+
+.main-content {
+  display: grid;
+  grid-gap: 2rem;
+  grid-area: content;
+  margin-bottom: 2rem;
+}
+
+footer {
+  grid-area: footer;
+  padding: 0.5rem;
+  background: #4B3D21;
+  color: var(--light-brown);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 700px) {
+  .page {
+    justify-items: stretch;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "nav content"
+    "footer footer";
+    grid-template-columns: 2fr auto;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .nav-list {
+    text-align: left;
+    max-height: 500px;
+    transform: none;
+    transition: 0s;
+  }
+
+  .navigation {
+    border-right: 3px double var(--black);
+    border-bottom: 0;
+    perspective: none;
+  }
+
+  footer {
+    text-align: center;
+    background: #4B3D21;
+    color: var(--light-brown);
+  }
 }
