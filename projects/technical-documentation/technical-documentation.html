@@ -130,7 +130,7 @@
 
         <code>
           <span class="code-text">layer = QgsVectorLayer(data_source, layer_name, provider_name)</span>
-          <span class="code-text">if not layer.isValid():</span></br>
+          <span class="code-text">if not layer.isValid():</span>
           <span class="code-text indent">print("Layer failed to load!")</span>
         </code>
       </article>
@@ -162,7 +162,7 @@
         </p>
 
         <code>
-            <span class="code-text">iface.addRasterLayer("/path/to/raster/file.tif", "layer name you like")</span>
+          <span class="code-text">iface.addRasterLayer("/path/to/raster/file.tif", "layer name you like")</span>
         </code>
       </article>
 
@@ -175,6 +175,26 @@
         </h2>
       </header>
 
+      <article>
+        <p>
+          You can retrieve information about the fields associated with a vector layer by calling fields() on a <span class="pre">QgsVectorLayer</span>instance:
+          <code>
+            <span class="code-text">for field in layer.fields():</span>
+            <span class="code-text indent">print(field.name(), field.typeName())</span>
+          </code>
+        </p>
+        <p>
+          Attributes can be referred to by their name:
+          <code>
+            <span class="code-text">print(feature['name'])</span>
+          </code>
+          Alternatively, attributes can be referred to by index. This is a bit faster than using the name.
+          For example, to get the first attribute:
+          <code>
+            <span class="code-text">print(feature[0])</span>
+          </code>
+        </p>
+      </article>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium mollitia cupiditate ipsum! Distinctio fuga commodi sit impedit cupiditate quidem, voluptate incidunt, nisi rerum obcaecati vitae esse nostrum consectetur in qui veritatis! Laudantium possimus atque, quos voluptatibus asperiores quibusdam veritatis sit minus adipisci fuga ipsam inventore quae eius optio, placeat repellat magnam. Ea veritatis accusantium labore aspernatur commodi ullam totam nisi fuga consequatur neque hic incidunt architecto officiis, vero perspiciatis ad est rerum exercitationem consequuntur saepe rem nam enim impedit! At eos, eius incidunt tempore animi nisi laborum exercitationem iure commodi facilis aliquid quod natus vel autem adipisci soluta sequi illum suscipit, iusto in. Accusantium pariatur eligendi ullam odio ratione aliquam quibusdam, nemo quo est natus modi, qui ducimus! Consectetur, voluptatum quibusdam, rem quam ducimus dolor beatae doloremque molestiae eveniet illo labore esse? Debitis vero reiciendis velit obcaecati ad, deleniti quaerat fugit, nostrum repellat corrupti quia doloribus ipsam deserunt perferendis odio?
         </p>
@@ -244,9 +264,27 @@
         </h2>
       </header>
 
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus nobis, perferendis at voluptatem minus illo, ex cum ipsa fugit esse nemo tempora itaque ad dolor facilis! Maxime quas consequuntur labore modi ipsum et officia nostrum magni voluptate ex nesciunt non autem dolorum dicta eveniet, reprehenderit sapiente error saepe! Impedit aliquam reprehenderit placeat eaque? Distinctio tempore aliquam natus expedita sapiente neque sint quas sit veritatis reprehenderit perspiciatis, nulla repellat deserunt nostrum nam repellendus, facilis mollitia nihil ipsum aspernatur. Sapiente quasi dolore dignissimos sed fuga culpa? Tenetur sapiente aspernatur soluta ducimus tempora placeat architecto quas rerum! Veritatis asperiores hic ipsam dolorum? Repellendus animi doloremque nesciunt ducimus dolore aliquam voluptatibus ex in? Cupiditate id fugit, nobis odio nisi, est enim veniam voluptates provident dolorem aspernatur quam saepe doloremque error ex itaque fugiat accusamus repellendus quod ullam placeat cum alias vero non! Porro, recusandae. Tempora ratione dolores voluptatum eius voluptates in impedit iste reiciendis!
-      </p>
+      <article>
+        <p>
+          There are generally two approaches when input data should be rendered as a map: either do it quick way using
+          <span class="pre">QgsMapRenderer</span> or produce more fine-tuned output by composing the map with
+          <span class="pre">QgsComposition</span> class and friends.
+        </p>
+
+        <p>
+          If you have more than one layer and they have a different CRS, the simple example above will probably
+          not work: to get the right values from the extent calculations you have to explicitly set the destination
+          CRS and enable OTF reprojection as in the example below (only the renderer configuration part is reported)
+        </p>
+        
+        <code>
+          <span class="code-text"># set layer set</span>
+          <span class="code-text">layers = QgsMapLayerRegistry.instance().mapLayers()</span>
+          <span class="code-text">lst = layers.keys()</span>
+          <span class="code-text">render.setLayerSet(lst)</span>
+        </code>
+      </article>
+
     </section> 
 
   </main>

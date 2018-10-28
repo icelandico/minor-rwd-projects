@@ -7,11 +7,11 @@ html, body {
   color: var(--dark-blue);
   font-family: "Calibri", monospace;
   font-size: 12px;
+  margin: 0 0.5rem;
 }
 
 .page {
   display: grid;
-  padding: 1rem 2rem;
   justify-items: stretch;
   grid-gap: 1rem;
   grid-template-areas: 
@@ -77,10 +77,11 @@ html, body {
   display: grid;
   grid-area: content;
   margin-bottom: 2rem;
+  overflow: auto;
 }
 
 .main-section > * {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 article > * {
@@ -114,7 +115,7 @@ code {
 }
 
 .code-text {
-  display: inline-block;
+  display: block;
   margin: 0.5rem 0;
 }
 
@@ -164,6 +165,9 @@ footer {
   }
 
   .navigation {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     border-right: 3px double var(--black);
     border-bottom: 0;
     perspective: none;

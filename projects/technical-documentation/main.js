@@ -14,5 +14,3 @@ window.onresize = () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => navigationList.classList.remove('transition-off'), 250);
 };
-
-
