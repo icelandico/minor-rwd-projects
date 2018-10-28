@@ -91,8 +91,27 @@
         </h2>
       </header>
 
+      <article>
+
+      </article>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maiores culpa, non cumque inventore assumenda saepe ullam in animi. Saepe iusto doloribus officia impedit reiciendis? Debitis sint eius ab quo a, fugiat laborum, omnis neque quibusdam similique asperiores doloribus est? Veniam porro excepturi eligendi tempore quos ab voluptates vitae commodi ullam mollitia, asperiores alias ratione ipsam sit laudantium at totam, deleniti sequi reprehenderit ducimus quam dignissimos? Vero eligendi officia laboriosam tempore, dolorem, vel veniam aut voluptate fugiat odit eius atque accusamus commodi et! Suscipit beatae neque consequatur sapiente, ad obcaecati delectus debitis amet recusandae aut porro temporibus, assumenda eaque mollitia, odio minima at iste cupiditate quam quis ut in deleniti ab. Ut est necessitatibus nam, nobis numquam doloribus perspiciatis rem exercitationem atque fuga corporis, veniam quae dolorem accusamus ad tempora tenetur dignissimos itaque rerum! Possimus quae reiciendis, facilis ab earum accusamus non temporibus totam quisquam facere perspiciatis corporis sint neque?  
+          To load a project into the current QGIS application you need to create
+          a <span class="pre">QgsProject instance()</span> object and call its <span class="pre">read()</span> method passing the path
+          of the project to be loaded:
+        </p>
+
+        <code>
+          <span class="code-text">from qgis.core import QgsProject</span>
+          <span class="code-text">project = QgsProject.instance())</span>
+          <span class="code-text">print(project.fileName()</span>
+          <span class="code-text">project.read('/home/user/projects/my_other_qgis_project.qgs')</span>
+          <span class="code-text">print(project.fileName())</span>
+        </code>
+
+        <p>
+          If you need to make modifications to the project
+          (for example to add or remove some layers) and save your changes, call the <span class="pre">write()</span>
+            method of your project instance.
         </p>
 
     </section>
@@ -150,7 +169,7 @@
           Map Rendering
         </h2>
       </header>
-      
+
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus nobis, perferendis at voluptatem minus illo, ex cum ipsa fugit esse nemo tempora itaque ad dolor facilis! Maxime quas consequuntur labore modi ipsum et officia nostrum magni voluptate ex nesciunt non autem dolorum dicta eveniet, reprehenderit sapiente error saepe! Impedit aliquam reprehenderit placeat eaque? Distinctio tempore aliquam natus expedita sapiente neque sint quas sit veritatis reprehenderit perspiciatis, nulla repellat deserunt nostrum nam repellendus, facilis mollitia nihil ipsum aspernatur. Sapiente quasi dolore dignissimos sed fuga culpa? Tenetur sapiente aspernatur soluta ducimus tempora placeat architecto quas rerum! Veritatis asperiores hic ipsam dolorum? Repellendus animi doloremque nesciunt ducimus dolore aliquam voluptatibus ex in? Cupiditate id fugit, nobis odio nisi, est enim veniam voluptates provident dolorem aspernatur quam saepe doloremque error ex itaque fugiat accusamus repellendus quod ullam placeat cum alias vero non! Porro, recusandae. Tempora ratione dolores voluptatum eius voluptates in impedit iste reiciendis!
       </p>

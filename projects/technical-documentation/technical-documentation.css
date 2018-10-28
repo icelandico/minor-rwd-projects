@@ -87,6 +87,10 @@ article > * {
   margin: 1rem 0;
 }
 
+p {
+  line-height: 1.5rem;
+}
+
 .main-section header {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -101,10 +105,24 @@ article > * {
 code {
   display: block;
   font-family: monospace;
-  padding: 1rem;
+  padding: 0.5rem;
   background: var(--light-gray);
   color: var(--light-brown);
   margin: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e1e1e8
+}
+
+.code-text {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+span.pre {
+  background: var(--light-gray);
+  padding: 2px 4px;
+  color: var(--light-brown);
+  white-space: nowrap;
   border-radius: 0.5rem;
 }
 
