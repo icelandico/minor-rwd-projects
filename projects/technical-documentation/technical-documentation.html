@@ -134,6 +134,36 @@
           <span class="code-text">if not layer.isValid():</span>
           <span class="code-text indent">print("Layer failed to load!")</span>
         </code>
+
+        <p>
+          PostGIS database — data source is a string with all information needed to create a connection to PostgreSQL database. 
+          QgsDataSourceUri class can generate this string for you. Note that QGIS has to be compiled with Postgres support, otherwise 
+          this provider isn’t available:
+          <code>
+            <span class="code-text">uri = QgsDataSourceUri()</span>
+            <span class="code-text"># set host name, port, database name, username and password</span>
+            <span class="code-text">uri.setConnection("localhost", "5432", "dbname", "johny", "xxx")</span>
+            <span class="code-text"># set database schema, table name, geometry column and optionally/span>
+            <span class="code-text"># subset (WHERE clause)</span>
+            <span class="code-text">uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")</span>
+            <span class="code-text">vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")</span>
+          </code>
+        </p>
+
+        <p>
+          SpatiaLite database — Similarly to PostGIS databases, QgsDataSourceUri can be used for generation of data source identifier:
+          <code>
+            <span class="code-text">uri = QgsDataSourceUri()</span>
+            <span class="code-text">uri.setDatabase('/home/martin/test-2.3.sqlite')</span>
+            <span class="code-text">schema = ''</span>
+            <span class="code-text">table = 'Towns'</span>
+            <span class="code-text">geom_column = 'Geometry'</span>
+            <span class="code-text">uri.setDataSource(schema, table, geom_column)</span>
+            <span class="code-text">display_name = 'Towns'</span>
+            <span class="code-text">vlayer = QgsVectorLayer(uri.uri(), display_name, 'spatialite')</span>
+          </code>
+          </p>
+
       </article>
 
     </section>
@@ -284,6 +314,50 @@
           <span class="code-text">lst = layers.keys()</span>
           <span class="code-text">render.setLayerSet(lst)</span>
         </code>
+
+        <p>
+          Print layout is a very handy tool if you would like to do a more sophisticated output than the simple rendering shown above.
+          It is possible to create complex map layouts consisting of map views, labels, legend, tables and other elements that are
+          usually present on paper maps. The layouts can be then exported to PDF, raster images or directly printed on a printer.
+          The layout consists of a bunch of classes. They all belong to the core library. QGIS application has a convenient GUI for 
+          placement of the elements, though it is not available in the GUI library. If you are not familiar with Qt Graphics View framework, 
+          then you are encouraged to check the documentation now, because the layout is based on it. Also check the Python documentation of 
+          the implementation of QGraphicView
+          <code>
+            <span class="code-text">mapRenderer = iface.mapCanvas().mapRenderer()</span>
+            <span class="code-text">c = QgsComposition(mapRenderer)</span>
+            <span class="code-text">c.setPlotStyle(QgsComposition.Print)</span>
+          </code>
+        </p>
+
+        <ul class="content-list">
+          <li>Arrow</li>
+
+          <li>Picture</li>
+
+          <li>Basic Shape</li>
+
+          <li>
+            Nodes based shape:
+            <code>
+              <span class="code-text">polygon = QPolygonF()</span>
+              <span class="code-text">polygon.append(QPointF(0.0, 0.0))</span>
+              <span class="code-text">composerPolygon = QgsComposerPolygon(polygon, c)</span>
+              <span class="code-text">props = {}</span>
+              <span class="code-text">props["joinstyle"] = "miter"</span>
+            </code>
+          </li>
+
+          <li>Table</li>
+          
+          <li>Scale bar</li>
+
+          <li>Scale bar</li>
+          
+          <li>Map</li>
+        </li>
+        </ul>
+
       </article>
 
     </section> 
