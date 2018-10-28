@@ -80,6 +80,16 @@ html, body {
   margin-bottom: 2rem;
 }
 
+.main-section > * {
+  margin: 1rem 0;
+}
+
+.main-section header {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .content-list {
   margin-left: 2rem;
   list-style: square;
