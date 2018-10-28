@@ -7,7 +7,7 @@ html, body {
   color: var(--dark-blue);
   font-family: "Calibri", monospace;
   font-size: 12px;
-  margin: 0 0.5rem;
+  margin: 1rem 0.5rem;
 }
 
 .page {
@@ -165,12 +165,16 @@ footer {
   }
 
   .navigation {
-    position: sticky;
-    top: 0;
-    height: 100vh;
     border-right: 3px double var(--black);
     border-bottom: 0;
     perspective: none;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
   }
 
   footer {
