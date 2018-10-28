@@ -80,7 +80,6 @@
           QGIS provides an integrated Python console for scripting. It can be opened from the menu
           <code>Plugins ‣ Python Console</code>
         </p>
-
       </article>
     </section>
 
@@ -111,9 +110,8 @@
         <p>
           If you need to make modifications to the project
           (for example to add or remove some layers) and save your changes, call the <span class="pre">write()</span>
-            method of your project instance.
+          method of your project instance.
         </p>
-
     </section>
 
     <section class="main-section" id="Loading_Layers">
@@ -123,9 +121,20 @@
         </h2>
       </header>
 
+      <article>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium iure in. Vero doloribus natus, odio animi saepe doloremque, perferendis iste ex fugit ducimus eveniet nostrum. Nam natus tempora culpa velit nihil, placeat minus expedita ratione vitae eligendi facere fuga illum cumque error voluptate eos a recusandae quidem numquam! Sit aperiam commodi quia vel at impedit? Iste, facilis. Expedita repellat quo esse, eos quisquam fugit in fugiat beatae, nihil voluptatem, obcaecati assumenda voluptate tenetur doloribus? Quam pariatur sequi debitis suscipit numquam blanditiis sed veritatis reprehenderit, laudantium voluptatum, ab maxime facere vel doloremque corrupti ullam repellendus! Quibusdam soluta eligendi inventore perspiciatis odio ipsam porro commodi iure beatae quisquam, reiciendis magnam, quae, distinctio nisi. Nisi, qui quisquam eaque, deserunt delectus quas ea eos unde, minus harum animi facere ipsa sit provident molestias exercitationem necessitatibus maiores. Debitis expedita minus omnis fuga et provident labore odit culpa laudantium dolorem assumenda, excepturi earum totam dolor!
+          QGIS recognizes vector and raster layers. Additionally, custom layer types are
+          available, but we are not going to discuss them here.
+          To load a vector layer, specify layer’s data source identifier, name for the layer and provider’s name:
         </p>
+
+        <code>
+
+          <span class="code-text">layer = QgsVectorLayer(data_source, layer_name, provider_name)</span>
+          <span class="code-text">if not layer.isValid():</span></br>
+          <span class="code-text indent">print("Layer failed to load!")</span>
+        </code>
+      </article>
 
     </section>
 
@@ -136,9 +145,28 @@
         </h2>
       </header>
       
+      <article>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eaque, sit ullam corrupti eum suscipit ad tempore quod voluptate nam natus exercitationem veniam officiis praesentium. Eveniet odit inventore distinctio doloribus rerum dicta amet voluptatibus obcaecati! Reiciendis, earum deserunt, dolorem sapiente libero totam modi labore praesentium architecto neque minus consequatur fuga vel esse cum vitae facere nisi optio, officiis eius quo iusto illum debitis! Modi voluptatum nemo, neque autem laudantium atque aliquid eum nostrum sequi nesciunt quidem, sint deserunt in distinctio temporibus voluptatibus possimus natus! Impedit facilis nobis perspiciatis aperiam nesciunt qui eum iusto quia unde voluptas exercitationem ducimus blanditiis iste earum, possimus repellendus, quaerat pariatur nulla sed dolore nisi voluptatum commodi odio! Dolorem nisi sapiente error perspiciatis neque excepturi veniam pariatur corporis deserunt nihil distinctio numquam enim porro adipisci repudiandae ex quaerat est quasi ullam nulla harum, cupiditate, nam delectus. Fuga quas voluptatibus consequuntur fugit accusamus beatae quidem sint ipsa nemo, cumque itaque vitae! Fugiat velit obcaecati repudiandae a facere, at perferendis! Quidem accusantium officia voluptatibus sit corrupti dolorum doloribus fugit voluptas quas, quibusdam fuga eius nostrum impedit sequi facilis et similique nobis omnis, ipsum eligendi ratione a totam quam quos? Necessitatibus, fuga vel omnis debitis animi et sint culpa temporibus quis tempora provident ea nostrum fugit deleniti natus odio ut eligendi sapiente sed illum accusantium ad. Debitis asperiores cumque eveniet, animi porro quae, amet iure id unde nam at corporis consequatur architecto est ducimus accusantium sit aliquam laudantium odit deleniti necessitatibus soluta blanditiis! Praesentium fugit nesciunt molestiae eveniet deleniti.
+          For accessing raster files, GDAL library is used. It supports a wide range of file formats. In case you have troubles
+          with opening some files, check whether your GDAL has support for the particular format (not all formats are available by default).
+          To load a raster from a file, specify its filename and display name:
         </p>
+
+        <code>
+          <span class="code-text">rlayer = QgsRasterLayer("/path/to/raster/file.tif", "my layer"</span>
+          <span class="code-text">if not rlayer.isValid():</span></br>
+          <span class="code-text indent">print("Layer failed to load!")</span>
+        </code>
+
+        <p>
+          Similarly to vector layers, raster layers can be loaded using the addRasterLayer function of the <span class="pre">QgisInterface:</span>
+        </p>
+
+        <code>
+            <span class="code-text">iface.addRasterLayer("/path/to/raster/file.tif", "layer name you like")</span>
+        </code>
+      </article>
+
     </section>
 
     <section class="main-section" id="Using_Vector_Layers">

@@ -108,7 +108,7 @@ code {
   padding: 0.5rem;
   background: var(--light-gray);
   color: var(--light-brown);
-  margin: 1rem;
+  margin: 1rem 0;
   border-radius: 0.5rem;
   border: 1px solid #e1e1e8
 }
@@ -124,6 +124,10 @@ span.pre {
   color: var(--light-brown);
   white-space: nowrap;
   border-radius: 0.5rem;
+}
+
+.indent {
+  padding-left: 1rem;
 }
 
 footer {
