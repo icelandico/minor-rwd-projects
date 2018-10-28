@@ -80,6 +80,21 @@ html, body {
   margin-bottom: 2rem;
 }
 
+.content-list {
+  margin-left: 2rem;
+  list-style: square;
+}
+
+code {
+  display: block;
+  font-family: monospace;
+  padding: 1rem;
+  background: var(--light-gray);
+  color: var(--light-brown);
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
 footer {
   grid-area: footer;
   padding: 0.5rem;
