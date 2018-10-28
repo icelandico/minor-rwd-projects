@@ -129,7 +129,6 @@
         </p>
 
         <code>
-
           <span class="code-text">layer = QgsVectorLayer(data_source, layer_name, provider_name)</span>
           <span class="code-text">if not layer.isValid():</span></br>
           <span class="code-text indent">print("Layer failed to load!")</span>
@@ -154,7 +153,7 @@
 
         <code>
           <span class="code-text">rlayer = QgsRasterLayer("/path/to/raster/file.tif", "my layer"</span>
-          <span class="code-text">if not rlayer.isValid():</span></br>
+          <span class="code-text">if not rlayer.isValid():</span>
           <span class="code-text indent">print("Layer failed to load!")</span>
         </code>
 
@@ -187,6 +186,53 @@
           Geometry Handling
         </h2>
       </header>
+
+      <article>
+        <p>
+          Points, linestrings and polygons that represent a spatial feature are commonly referred to as geometries.
+          In QGIS they are represented with the <span class="pre">QgsGeometry class</span>. Sometimes one geometry is actually a collection
+          of simple (single-part) geometries. Such a geometry is called a multi-part geometry. If it contains just one
+          type of simple geometry, we call it multi-point, multi-linestring or multi-polygon. For example, a country
+          consisting of multiple islands can be represented as a multi-polygon.
+        </p>
+        <p>
+          <ul class="content-list">
+            <li>Geometry Construction</li>
+            <li>Access to Geometry</li>
+            <li>Geometry Predicates and Operations</li>
+          </ul>
+        </p>
+        <p>
+          There are several options for creating a geometry:
+          <ul class="content-list">
+            <li>
+              From Coordinates:
+              <code>
+                <span class="code-text">gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))</span>
+                <span class="code-text">gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])</span>
+                <span class="code-text">gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), QgsPointXY(2, 2), QgsPointXY(2, 1)]])</span>
+              </code>
+            </li>
+            <li>
+              from well-known binary (WKB):
+              <code>
+                <span class="code-text">>>> g = QgsGeometry()</span>
+                <span class="code-text">>>> wkb = bytes.fromhex("010100000000000000000045400000000000001440")</span>
+                <span class="code-text">>>> g.fromWkb(wkb)</span>
+                <span class="code-text">>>> g.asWkt()</span>
+                <span class="code-text">'Point (42 5)'</span>
+              </code>
+            </li>
+            <li>
+              from well-known text (WKT):
+              <code>
+                <span class="code-text">gem = QgsGeometry.fromWkt("POINT(3 4)")</span>
+              </code>
+            </li>
+          </ul>
+        </p>
+
+      </article>
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eaque doloribus veritatis quod praesentium sit eligendi unde officiis assumenda explicabo facilis sapiente inventore laborum sequi at iste, doloremque dolor, impedit veniam? Distinctio ullam animi quis et ut quidem, architecto facilis incidunt. Eos veniam laudantium quibusdam dignissimos iste praesentium rem, sapiente ipsa soluta dolore totam natus maiores similique temporibus suscipit. Necessitatibus quisquam autem odio magnam, voluptatem ad aliquam perspiciatis vero odit iure sequi, maxime, expedita consectetur corporis nesciunt! Maxime minus reiciendis eos asperiores quia hic earum voluptatibus temporibus. Laborum ut cum similique dolorum repellat tempore vel, soluta dicta asperiores aut corrupti dolore, expedita molestias? Consequatur, ex modi magni, doloribus commodi impedit deleniti alias ipsum tempore necessitatibus et, eligendi ipsam sint incidunt consectetur qui praesentium placeat perspiciatis itaque dicta unde! Unde ipsam enim laudantium animi inventore laborum delectus, impedit porro minus dignissimos iure, odio minima facere? Rem ea sapiente pariatur laudantium reiciendis?</p>
     </section> 
