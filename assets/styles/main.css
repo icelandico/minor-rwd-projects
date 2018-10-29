@@ -30,6 +30,15 @@ section {
   text-align: center;
 }
 
+.project-container {
+  margin: 1% auto;
+  width: 30%;
+  position: relative;
+  border: 3px solid #324E78;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
 .project-link {
   display: block;
   text-decoration: none;
@@ -37,11 +46,34 @@ section {
   height: 100%;
   padding: 5%;
   font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
-.project-container {
-  margin: 1% auto;
-  background: #8094B2;
-  width: 30%;
+.project-link:after,
+.project-link:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  background: #324E78;
+  z-index: -1;
 }
 
+.project-link:before {
+  right: 0;
+  left: inherit;
+}
+
+.project-link:hover:before,
+.project-link:hover:after {
+  width: 50%;
+  opacity: 1;
+}
+
+.project-container:hover {
+  border: 3px solid #ecf0f1;
+}
