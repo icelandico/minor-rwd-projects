@@ -60,7 +60,8 @@ input, textarea {
 }
 
 textarea {
-  max-width: 100%;
+  resize: none;
+  width: 100%;
 }
 
 .fill-label {
