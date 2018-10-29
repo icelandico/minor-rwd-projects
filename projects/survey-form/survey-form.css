@@ -59,6 +59,10 @@ input, textarea {
   outline: none;
 }
 
+textarea {
+  max-width: 100%;
+}
+
 .fill-label {
   position: absolute;
   transition: 0.2s;
