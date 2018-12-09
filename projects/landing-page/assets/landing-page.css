@@ -6,14 +6,30 @@
 
 .nav-menu {
   display: flex;
-  list-style: none;
-  justify-content: space-around;
-  line-height: 50px; }
-  .nav-menu .menu-item a {
-    text-decoration: none; }
+  line-height: 50px;
+  justify-content: center; }
+  .nav-menu .menu-item {
+    text-align: center;
+    width: 100%;
+    border-left: 1px solid #6d6c6c;
+    flex: 0 0 20%;
+    transform: skew(-20deg); }
+    .nav-menu .menu-item :after {
+      background: blue;
+      content: '';
+      width: 50px;
+      height: 100px; }
+    .nav-menu .menu-item a {
+      display: inline-block;
+      text-decoration: none;
+      color: #7d4627;
+      font-size: 1.5rem;
+      transform: skew(20deg); }
+    .nav-menu .menu-item:last-child {
+      border-right: 1px solid #6d6c6c; }
 
 .content {
-  height: 50px;
+  height: 23vh;
   width: 100%; }
 
 .section-works {
