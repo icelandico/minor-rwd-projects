@@ -1,0 +1,24 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Simple Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icelandico/minor-rwd-projects.git"
+  },
+  "keywords": [
+    "landing-page",
+    "cartography",
+    "maps"
+  ],
+  "author": "Michal M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icelandico/minor-rwd-projects/issues"
+  },
+  "homepage": "https://github.com/icelandico/minor-rwd-projects#readme"
+}
