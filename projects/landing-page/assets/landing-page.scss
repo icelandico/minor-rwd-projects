@@ -1,6 +1,8 @@
 $header-color: #edd9c0;
 $header-font-color: #7d4627;
 $header-border-item: #6d6c6c;
+$section-color: #c9d8c5;
+$hover: #c9d8c5;
 
 .wrapper {
   display: grid;
@@ -18,28 +20,23 @@ $header-border-item: #6d6c6c;
   .menu-item {
     text-align: center;
     width: 100%;
-    border-left: 1px solid $header-border-item;
     flex: 0 0 20%;
+    background: $header-color;
     transform: skew(-20deg);
+    transition: 0.5s;
 
-    :after {
-      background: blue;
-      content: '';
-      width: 50px;
-      height: 100px;
+    &:hover {
+      box-shadow: inset 0 0 0 2em $hover;
     }
-       
+           
     & a {
-      display: inline-block;
+      display: block;
       text-decoration: none;
       color: $header-font-color;
       font-size: 1.5rem;
       transform: skew(20deg);
     }
     
-    &:last-child {
-      border-right: 1px solid $header-border-item;
-    }
   }
 }
 
