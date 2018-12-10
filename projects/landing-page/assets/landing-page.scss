@@ -12,13 +12,16 @@ $bar: #250202;
 .navigation {
   background: $header-color;
   height: 50px;
-  opacity: 0.5;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.menu-icon {
+.nav-header {
+  flex: 0 0 60%;
+}
+
+.nav-bars {
   flex: 0 0 10%;
   border: 1px solid $bar;
   border-radius: 5px;
@@ -26,6 +29,7 @@ $bar: #250202;
   padding: 2px;
   margin-right: 2rem;
   cursor: pointer;
+  z-index: 2;
 }
 
 .bar {
@@ -36,15 +40,23 @@ $bar: #250202;
 }
 
 .nav-menu {
-  display: none;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  background: $header-color;
+  z-index: 1;
 
   .menu-item {
-    text-align: center;
+    text-align: left;
     width: 100%;
-    flex: 0 0 15%;
-    transform: skew(-20deg);
     transition: 0.5s;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
 
     &:hover {
       box-shadow: inset 0 0 0 2em $hover;
@@ -54,8 +66,7 @@ $bar: #250202;
       display: block;
       text-decoration: none;
       color: $header-font-color;
-      font-size: .5rem;
-      transform: skew(20deg);
+      font-size: 1rem;
     }
   }
 }
