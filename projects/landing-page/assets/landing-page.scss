@@ -33,16 +33,16 @@ $hover: #c9d8c5;
       display: block;
       text-decoration: none;
       color: $header-font-color;
-      font-size: 1.5rem;
+      font-size: .5rem;
       transform: skew(20deg);
     }
-    
   }
 }
 
 .content {
-  height: 23vh;
-  width: 100%;
+  padding: 2rem auto;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .section-works {
@@ -51,6 +51,37 @@ $hover: #c9d8c5;
 
 .section-tools {
   background: #a8b6bf;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.card {
+  width: 50px;
+  height: 50px;
+  background-color: chocolate;
+  margin: 1rem;
+}
+
+.tools-logo {
+  display: flex;
+  outline: 1px solid red;
+  flex-wrap: wrap;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin: auto 20%;
+
+  .logo {
+    flex: 0 0 30%;
+    margin: 1rem;
+  }
+}
+
+.tool-logo {
+  width: 100px;
+  height: auto;
 }
 
 .footer {
