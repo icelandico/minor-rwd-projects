@@ -2,17 +2,35 @@
   display: grid; }
 
 .navigation {
-  background: #edd9c0; }
+  background: #edd9c0;
+  height: 50px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.menu-icon {
+  flex: 0 0 10%;
+  border: 1px solid #250202;
+  border-radius: 5px;
+  height: 30px;
+  padding: 2px;
+  margin-right: 2rem;
+  cursor: pointer; }
+
+.bar {
+  height: 6px;
+  width: 75%;
+  background: #250202;
+  margin: 3px auto; }
 
 .nav-menu {
-  display: flex;
-  line-height: 50px;
+  display: none;
   justify-content: center; }
   .nav-menu .menu-item {
     text-align: center;
     width: 100%;
-    flex: 0 0 20%;
-    background: #edd9c0;
+    flex: 0 0 15%;
     transform: skew(-20deg);
     transition: 0.5s; }
     .nav-menu .menu-item:hover {
@@ -44,15 +62,14 @@
   background-color: chocolate;
   margin: 1rem; }
 
-.tools-logo {
+.projects {
   display: flex;
-  outline: 1px solid red;
   flex-wrap: wrap;
   text-align: center;
   align-content: center;
   justify-content: center;
   margin: auto 20%; }
-  .tools-logo .logo {
+  .projects .logo {
     flex: 0 0 30%;
     margin: 1rem; }
 
@@ -60,5 +77,5 @@
   width: 100px;
   height: auto; }
 
-.footer {
+.contact {
   background-color: #7d4627; }

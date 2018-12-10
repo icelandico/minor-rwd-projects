@@ -3,6 +3,7 @@ $header-font-color: #7d4627;
 $header-border-item: #6d6c6c;
 $section-color: #c9d8c5;
 $hover: #c9d8c5;
+$bar: #250202;
 
 .wrapper {
   display: grid;
@@ -10,18 +11,38 @@ $hover: #c9d8c5;
 
 .navigation {
   background: $header-color;
+  height: 50px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-icon {
+  flex: 0 0 10%;
+  border: 1px solid $bar;
+  border-radius: 5px;
+  height: 30px;
+  padding: 2px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.bar {
+  height: 6px;
+  width: 75%;
+  background: $bar;
+  margin: 3px auto;
 }
 
 .nav-menu {
-  display: flex;
-  line-height: 50px;
+  display: none;
   justify-content: center;
 
   .menu-item {
     text-align: center;
     width: 100%;
-    flex: 0 0 20%;
-    background: $header-color;
+    flex: 0 0 15%;
     transform: skew(-20deg);
     transition: 0.5s;
 
@@ -64,9 +85,8 @@ $hover: #c9d8c5;
   margin: 1rem;
 }
 
-.tools-logo {
+.projects {
   display: flex;
-  outline: 1px solid red;
   flex-wrap: wrap;
   text-align: center;
   align-content: center;
@@ -84,6 +104,6 @@ $hover: #c9d8c5;
   height: auto;
 }
 
-.footer {
+.contact {
   background-color: #7d4627;
 }
