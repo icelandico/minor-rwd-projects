@@ -19,14 +19,40 @@ body, html {
   transform: translateY(-3px);
 }
 
-.hand {
-  width: 50%;
-  height: 10px;
+.clock-dot {
   position: absolute;
   top: 50%;
-  background: #962417;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background: #756867;
+}
+
+.hand {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  height: 10px;
+  background: #756867;
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: all 0.2s;
   transition-timing-function: cubic-bezier(0.1, 3, 0.75, 1) ;
+}
+
+.seconds-hand {
+  height: 5px;
+}
+
+.hour-hand {
+  width: 30%;
+  left: 20%;
+  height: 10px;
+}
+
+.minutes-hand {
+  width: 40%;
+  left: 10%;
 }
