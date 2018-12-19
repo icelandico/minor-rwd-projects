@@ -69,6 +69,16 @@ body, html {
   left: 10%;
 }
 
+.time-display {
+  font-size: 3rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif'
+}
+
+#display {
+  margin-top: 1rem;
+  font-weight: 900;
+}
+
 @media screen and (min-width: 768px) {
   .clock {
     width: 40%;
