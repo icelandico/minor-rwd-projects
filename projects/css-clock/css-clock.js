@@ -16,7 +16,7 @@ function setDate() {
   const hours = timeNow.getHours();
   const hoursDegrees = ((hours / 12) * 360) + 90
   handHours.style.transform = `rotate(${hoursDegrees}deg)`
-  timeDisplay.innerHTML = `${hours} : ${minutes} : ${leadingZero(seconds)}`
+  displayTime(hours, minutes, seconds)
 }
 
 function leadingZero(num) {
@@ -26,6 +26,10 @@ function leadingZero(num) {
 function getTime() {
   const timeNow = new Date();
   return timeNow
+}
+
+function displayTime(hrs, mins, secs) {
+  timeDisplay.innerHTML = `${hrs} : ${mins} : ${leadingZero(secs)}`
 }
 
 

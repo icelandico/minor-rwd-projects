@@ -38,8 +38,8 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 2rem;
+  height: 2rem;
   background: #ece493;
 }
 
