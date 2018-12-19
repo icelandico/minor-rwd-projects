@@ -3,6 +3,7 @@ body, html {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background: #fcf8f3;
 }
 
 .wrapper {
@@ -16,11 +17,12 @@ body, html {
 .clock {
   width: 60%;
   height: 30%;
-  border: 1rem solid #000;
+  border: 1rem solid #84a1be;
   border-radius: 50%;
   margin: 50px auto;
   position: relative;
   padding: 1rem;
+  background: #5c7893;
 }
 
 .clock-face {
@@ -38,7 +40,7 @@ body, html {
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  background: #756867;
+  background: #ece493;
 }
 
 .hand {
@@ -47,7 +49,7 @@ body, html {
   position: absolute;
   top: 50%;
   height: 0.5rem;
-  background: #756867;
+  background: #ece493;
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: all 0.2s;
