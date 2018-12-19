@@ -1,6 +1,7 @@
-const handSeconds = document.querySelector('.seconds-hand')
-const handMinutes = document.querySelector('.minutes-hand')
-const handHours = document.querySelector('.hour-hand')
+const handSeconds = document.querySelector('.seconds-hand');
+const handMinutes = document.querySelector('.minutes-hand');
+const handHours = document.querySelector('.hour-hand');
+const timeDisplay = document.querySelector('.time-display > p');
 
 function setDate() {
   const timeNow = getTime();
@@ -15,6 +16,7 @@ function setDate() {
   const hours = timeNow.getHours();
   const hoursDegrees = ((hours / 12) * 360) + 90
   handHours.style.transform = `rotate(${hoursDegrees}deg)`
+  timeDisplay.innerHTML = `${hours} : ${minutes} : ${seconds}`
 }
 
 function getTime() {
