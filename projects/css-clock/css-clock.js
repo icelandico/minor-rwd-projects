@@ -37,5 +37,4 @@ function removeTransition() {
   return handSeconds.style.transform === 'rotate(90deg)' ? handSeconds.style.transition = 'none' : null
 }
 
-
 setInterval(setDate, 1000)

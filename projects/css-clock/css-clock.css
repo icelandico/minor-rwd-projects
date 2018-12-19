@@ -3,7 +3,7 @@ body, html {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: #fcf8f3;
+  background: #fefcdb;
 }
 
 .wrapper {
@@ -17,12 +17,13 @@ body, html {
 .clock {
   width: 60%;
   height: 30%;
-  border: 1rem solid #84a1be;
+  border: 0.5rem solid #84a1be;
   border-radius: 50%;
-  margin: 50px auto;
+  margin: 2rem auto;
   position: relative;
   padding: 1rem;
-  background: #5c7893;
+  background: url('https://cssanimation.rocks/images/posts/clocks/ios_clock.svg') no-repeat center;
+  background-origin: content-box;
 }
 
 .clock-face {
@@ -83,8 +84,8 @@ body, html {
 
 @media screen and (min-width: 768px) {
   .clock {
-    width: 40%;
-    height: 65%;
+    width: 35%;
+    height: 60%;
   }
 
   .hand {
