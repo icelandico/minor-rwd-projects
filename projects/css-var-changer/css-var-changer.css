@@ -2,6 +2,7 @@
   --base: #ffc600;
   --spacing: 10px;
   --blur: 10px;
+  --opacity: 1;
 }
 
 body, html {
@@ -21,14 +22,19 @@ body, html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.inline-title {
+  color: var(--base);
+}
+
 label, input {
   display: block;
   text-align: center;
-  width: 100%;
 }
 
 input {
   margin-top: 1rem;
+  width: 65%;
+  margin: 1rem auto;
 }
 
 .content {
@@ -51,8 +57,6 @@ input {
 .single-input {
   flex: 1 1 auto;
   padding: 1rem;
-  border: 0.05rem solid #341f97;
-  border-radius: 0.25rem;
   text-align: center;
   margin: 0.25rem;
   color: #fff;
@@ -65,12 +69,13 @@ input {
   background: var(--base);
   padding: var(--spacing);
   filter: blur(var(--blur));
+  opacity: var(--opacity);
 }
 
 input[type=range] {
   -webkit-appearance: none;
-  width: 100%;
 }
+
 input[type=range]:focus {
   outline: none;
 }
