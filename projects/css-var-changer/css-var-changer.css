@@ -1,1 +1,44 @@
 
+.main {
+  height: 100vh;
+  background-color: #01a3a4;
+}
+
+.title {
+  text-align: center;
+  background-color: #341f97;
+  color: #fff;
+  padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label, input {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  margin-top: 1rem;
+}
+
+.content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.single-input {
+  flex: 1 1 auto;
+  padding: 1rem;
+  border: 0.1rem solid #4e438d;
+  border-radius: 0.25rem;
+  text-align: center;
+  margin: 0.25rem;
+}
