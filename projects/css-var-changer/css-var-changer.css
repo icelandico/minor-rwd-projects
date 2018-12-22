@@ -62,5 +62,7 @@ input {
 .background-image {
   max-width: 65%;
   max-height: 65%;
+  background: var(--base);
+  padding: var(--spacing);
+  filter: blur(var(--blur));
 }
-
