@@ -1,7 +1,7 @@
 :root {
   --base: #ffc600;
-  --spacing: 10px;
-  --blur: 1px;
+  --spacing: 1px;
+  --blur: 0;
   --opacity: 1;
 }
 
