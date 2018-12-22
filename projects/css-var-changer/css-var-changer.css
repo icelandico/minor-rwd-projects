@@ -1,7 +1,16 @@
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+body, html {
+  height: 100vh;
+}
 
 .main {
-  height: 100vh;
-  background-color: #01a3a4;
+  height: 100%;
+  background-color: #576574;
 }
 
 .title {
@@ -27,6 +36,11 @@ input {
   margin: 0 auto;
 }
 
+.content > div {
+  margin: 1rem auto;
+  text-align: center;
+}
+
 .inputs {
   display: flex;
   justify-content: space-around;
@@ -37,8 +51,16 @@ input {
 .single-input {
   flex: 1 1 auto;
   padding: 1rem;
-  border: 0.1rem solid #4e438d;
+  border: 0.05rem solid #341f97;
   border-radius: 0.25rem;
   text-align: center;
   margin: 0.25rem;
+  color: #fff;
+  font-size: 1.5rem;
 }
+
+.background-image {
+  max-width: 65%;
+  max-height: 65%;
+}
+
