@@ -1,7 +1,8 @@
 const inputs = Array.from(document.querySelectorAll('input'));
+const backgroundImg = document.querySelector('.background-image');
 
 function handleChange() {
-  console.log(this.value);
+  backgroundImg.style.setProperty('--base', this.value);
 }
 
 inputs.forEach(input => input.addEventListener('change', handleChange));
