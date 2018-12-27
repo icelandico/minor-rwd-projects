@@ -28,11 +28,12 @@ section {
 .container {
   margin: 0 auto;
   text-align: center;
+  padding: 1rem;
 }
 
 .project-container {
-  margin: 1% auto;
-  width: 30%;
+  margin: 3% auto;
+  width: 80%;
   position: relative;
   border: 3px solid #324E78;
   z-index: 1;
@@ -45,7 +46,7 @@ section {
   color: #ecf0f1;
   height: 100%;
   padding: 5%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   transition: all 0.3s ease;
 }
 
@@ -76,4 +77,15 @@ section {
 
 .project-container:hover {
   border: 3px solid #ecf0f1;
+}
+
+@media screen and (min-width: 768px) {
+  .project-container {
+    margin: 1% auto;
+    width: 30%;
+  }
+
+  .project-link {
+    font-size: 1.5rem;
+  }
 }
