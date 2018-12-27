@@ -82,7 +82,7 @@
     .panel.open-active > *:first-child {
       transform: translateY(0);
     }
-    
+
     .panel p {
       text-transform: uppercase;
       font-family: 'Amatic SC', cursive;
@@ -95,4 +95,5 @@
     }
     .panel.open {
       font-size: 40px;
+      flex: 5;
     }
