@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Snippets</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../assets/styles/reset.css">
+  <link rel="stylesheet" href="css-var-changer.css">
+</head>
+
+<body>
+  <div class="main">
+    <header class="title">
+      <h1>CSS Variables Updater with <span class="inline-title">JavaScript</span></h1>
+    </header>
+    <div class="content">
+      <div class="inputs">
+        <div class="single-input">
+          <label for="spacing">
+            Spacing
+            <input type="range" id="spacing" value="1" />
+          </label>
+        </div>
+        <div class="single-input">
+          <label for="blur">
+            Blur
+            <input type="range" id="blur" value="0" />
+          </label>
+        </div>
+        <div class="single-input">
+          <label for="opacity">
+            Opacity
+            <input type="range" id="opacity" value="100" />
+          </label>
+        </div>
+        <div class="single-input">
+          <label for="color">
+            Background
+            <input type="color" id="color" value="#ffc600" />
+          </label>
+        </div>
+      </div>
+      <div class="image">
+        <img class="background-image"
+          src="https://images.pexels.com/photos/789380/pexels-photo-789380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+      </div>
+    </div>
+
+  </div>
+
+  <script src="css-var-changer.js" async defer></script>
+</body>
+
+</html>
