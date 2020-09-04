@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/icelandico/minor-rwd-projects#readme",
   "devDependencies": {
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.18.7"
   }
 }
